@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -17,6 +17,18 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "6UmDm4PB9vilPTpS8",
+        });
+      })();
+    </script>
+    <script src="./email.js"></script>
   </head>
   <!-- Set default theme to dark -->
   <body data-theme="dark">
@@ -414,7 +426,8 @@
                 required
               ></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-full">
+            <button onclick="sendEmail()
+            " type="submit" class="btn btn-primary btn-full">
               Send Message
             </button>
           </form>

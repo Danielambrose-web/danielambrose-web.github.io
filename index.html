@@ -3,8 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Portfolio — Daniel Ambrose</title>
+    <title>Daniel Ambrose | Frontend Developer in Nigeria</title>
+    <meta
+      name="description"
+      content="Daniel Ambrose is a frontend developer in Uyo, Nigeria, building responsive web applications with HTML, CSS, JavaScript, and React."
+    />
+    <meta name="theme-color" content="#121212" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Daniel Ambrose | Frontend Developer" />
+    <meta
+      property="og:description"
+      content="Explore the portfolio and projects of Daniel Ambrose, a frontend developer in Uyo, Nigeria."
+    />
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -17,18 +31,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init({
-          publicKey: "6UmDm4PB9vilPTpS8",
-        });
-      })();
-    </script>
-    <script src="./email.js"></script>
   </head>
   <!-- Set default theme to dark -->
   <body data-theme="dark">
@@ -112,6 +114,8 @@
               <img
                 src="./img/me.jpg"
                 alt="Portrait of Daniel Ambrose"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div class="about-text">
@@ -287,6 +291,8 @@
                 class="project-image"
                 src="./img/projects/e-commerce.png"
                 alt="E-Commerce Platform Screenshot"
+                loading="lazy"
+                decoding="async"
               />
               <div class="project-content">
                 <h3 class="project-title">E-Commerce Platform</h3>
@@ -318,6 +324,8 @@
                 class="project-image"
                 src="./img/projects/portfolio.png"
                 alt="Portfolio Template Screenshot"
+                loading="lazy"
+                decoding="async"
               />
               <div class="project-content">
                 <h3 class="project-title">Portfolio Template</h3>
@@ -348,6 +356,8 @@
                 class="project-image"
                 src="./img/projects/survey.png"
                 alt="Survey System Screenshot"
+                loading="lazy"
+                decoding="async"
               />
               <div class="project-content">
                 <h3 class="project-title">Survey System</h3>
@@ -378,7 +388,9 @@
               <img
                 class="project-image"
                 src="./img/projects/leadtracker.png"
-                alt="Survey System Screenshot"
+                alt="Lead Tracker browser extension screenshot"
+                loading="lazy"
+                decoding="async"
               />
               <div class="project-content">
                 <h3 class="project-title">Lead Tracker Google Extension</h3>
@@ -410,7 +422,9 @@
               <img
                 class="project-image"
                 src="./img/projects/Todo App.png"
-                alt="Survey System Screenshot"
+                alt="Todo App screenshot"
+                loading="lazy"
+                decoding="async"
               />
               <div class="project-content">
                 <h3 class="project-title">Todo App</h3>
@@ -495,12 +509,12 @@
               ></textarea>
             </div>
             <button
-              onclick="sendEmail()"
               type="submit"
               class="btn btn-primary btn-full"
             >
               Send Message
             </button>
+            <p class="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
       </section>
@@ -556,6 +570,7 @@
       <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
+    <script src="email.js" defer></script>
   </body>
 </html>
